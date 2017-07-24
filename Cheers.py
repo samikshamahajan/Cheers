@@ -14,10 +14,10 @@ class Cheers:
     def calculate_length(self):
         length = 2*self.radius*(1 - self.mymath.cosine(self.alpha.valueofalpha()/2))
         return length
-print("Enter Radius: ")
 r=0
+# Handling exceptions for invalid inputs
 try:
-    r = float(input())
+    r = float(input("Enter Radius: "))
 except:
     print("Invalid Input")
     exit(0)
@@ -25,7 +25,7 @@ if r < 0:
     print("Value of radius should not be negative")
 else:
     cheers = Cheers(r)
-    print(cheers.calculate_length())
+    print("Length of the Line Segment: ", cheers.calculate_length())
 
 
 
