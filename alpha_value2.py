@@ -1,14 +1,12 @@
 # class to approximate the value of alpha using bisection method
 
-from MyMath import MyMath
+import math
 
 
-class Alpha:
+class Alpha2:
     """
-    Class containing method to calculate the value of alpha used in the program without using any libraries
+    Class containing method to calculate the value of alpha used in the program  using math library
     """
-    mymath = MyMath()
-
 
     def valueofalpha(self):
         """
@@ -16,7 +14,7 @@ class Alpha:
         :return: float value of alpha
         """
         lower = 0
-        upper = self.mymath.valueofpi()
+        upper = math.pi
         for i in range(10):
             mid=(lower+upper)/2
             valueoffnatlower = self.fn(lower)
@@ -27,7 +25,6 @@ class Alpha:
                 lower = mid
         return (lower + upper)/2
 
-
     def fn(self,x):
-        value = x-self.mymath.sine(x)-(self.mymath.valueofpi()/2) # expression
+        value = x-math.sin(x)-(math.pi/2)
         return value
