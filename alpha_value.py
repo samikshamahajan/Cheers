@@ -9,7 +9,6 @@ class Alpha:
     """
     mymath = MyMath()
 
-
     def valueofalpha(self):
         """
         function to calculate value of alpha using bisection method
@@ -29,5 +28,5 @@ class Alpha:
 
 
     def fn(self,x):
-        value = x-self.mymath.sine(x)-(self.mymath.valueofpi()/2) # expression
+        value = x-self.mymath.sine(x,5)-(self.mymath.valueofpi()/2) # expression
         return value
